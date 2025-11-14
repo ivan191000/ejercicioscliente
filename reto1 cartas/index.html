@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .contenedor{
+        display: grid;
+        grid-template-columns: 300px 300px 300px 300px;
+        }
+    .carta {
+        cursor: pointer;
+ 
+        }
+
+    .acertada {
+        border: 3px solid red;
+  
+         }
+    </style>
+</head>
+<body>
+    <h1>Adivina la pareja</h1>
+    <!-- hacemos 3 contadores 1 de acciones 1 de fallos 1 de aciertos -->
+    <p>Este juego consiste en ir adivinando parejas de cartas, deberas de acertar todas  las parejas para finalizar, a cada pareja acertada se le pondra un marco rojo</p>
+    <label>Contador:</label>
+    <p id="contador">0</p>
+    <label>Contador de aciertos:</label>
+    <p id="contador2">0</p>
+    <label>Contador de fallos:</label>
+    <p id="contador3">0</p>
+<!-- creamos clase contenedor con las imagenes del boton -->
+ <!-- cada imagen contiene un dataset personalizable con el nombre de cada animal -->
+    <div class="contenedor">
+    <img src="botonrojo.webp" class="carta" data-animal="abeja">
+    <img src="botonrojo.webp" class="carta" data-animal="abeja">
+    <img src="botonrojo.webp" class="carta" data-animal="leon">
+    <img src="botonrojo.webp" class="carta" data-animal="leon">
+    <img src="botonrojo.webp" class="carta" data-animal="oveja">
+    <img src="botonrojo.webp" class="carta" data-animal="oveja">
+    <img src="botonrojo.webp" class="carta" data-animal="rana">
+    <img src="botonrojo.webp" class="carta" data-animal="rana">
+    </div>
+
+    <script src="cartas.js"></script>
+</body>
+</html>
