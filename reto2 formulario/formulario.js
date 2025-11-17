@@ -1,6 +1,9 @@
 /* hacemos un addEventListener del boton para ejecutar todos los ifs una vez hagamos click */
 const boton=document.getElementById("boton");
-boton.addEventListener("click",()=>{
+boton.addEventListener("click",(event)=>{
+    
+    event.preventDefault();
+  
     /* referenciamos cada elemento input y lo guardamos en const */
     const inputId=document.getElementsByTagName("input")[0];
     const inputNombre=document.getElementsByTagName("input")[1];
@@ -17,6 +20,8 @@ boton.addEventListener("click",()=>{
     const errorTelefono=document.getElementById("errorTelefono");
     const errorSeleccion=document.getElementById("errorSeleccion");
     const errorCheck=document.getElementById("errorCheck");
+
+    
       
     
    /* mediante if comprobamos si ese input es o no valido */
@@ -87,7 +92,11 @@ boton.addEventListener("click",()=>{
     check.style.border="2px solid green";
     errorCheck.innerHTML="";
    }
+   
+
+  
 
 
 })
+
 
