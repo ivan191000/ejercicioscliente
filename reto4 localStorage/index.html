@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulario convalidacion</h1>
+    <label>Forfaits
+    <span id="contador">0</span><button id="resetForfait">resetear</button><br>
+
+    <label>Socios ski</label>
+    <span id="contadorSocios">0</span><button id="resetSocios">resetear</button>
+    <!-- utilizamos validity para saber que registro falla -->
+    <form novalidate>
+    <label>Identificador:</label>
+    <!-- ponemos todos los inputs con los pattern correspondientes -->
+    <input type="text" required pattern="^[a-zA-Z][0-9]{8}[a-zA-Z]$">
+    <!-- un span mostrara cada error -->
+    <span id="errorId"></span><br>
+    <label>Nombre y apellidos:</label>
+    <input type="text" required maxlength="50">
+    <span id="errorNombre"></span><br>
+    <label>Fecha de nacimiento:</label>
+    <input type="text" required pattern="^[0-9]{2}/[0-9]{2}/[0-9]{4}$">
+    <span id="errorFecha"></span><br>
+    <label>Correo electronico:</label>
+    <input type="text" required pattern="^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$">
+    <span id="errorCorreo"></span><br>
+    <label>Telefono:</label>
+    <input type="text" required pattern="^\+[1-9]{2,3}-[1-9]{9}$">
+    <span id="errorTelefono"></span><br>
+    <label>Edad:</label>
+    <select name="select" id="select" required>
+        <option value="selecciona">selecciona</option>
+        <option value="nino">niño</option>
+        <option value="adulto">adulto</option>
+        <option value="jubilado">jubilado</option>
+    </select>
+    <span id="errorSeleccion"></span><br>
+
+    <label>club de esqui:</label>
+    <label>
+        ad1
+    <input type="checkbox" name="ad1" id="check" required>
+    </label>
+    <span id="errorCheck"></span><br>
+    <button id="boton">enviar</button>
+    </form>
+   
+
+    <script src="formulario.js"></script>
+</body>
+</html>
