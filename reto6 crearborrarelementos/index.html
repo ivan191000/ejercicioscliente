@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* estilo que añadiremos al div que hemos creado */
+        .divStyle{
+            border: 2px solid black;
+            width: 300px;
+            text-align: center;
+            background: rgb(111, 111, 206);
+            border-radius: 2em;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <form>
+        <input type="text" name="titulo" id="titulo" placeholder="titulo:"><br>
+        <input type="url" name="url" id="url" placeholder="url:"><br>
+        <input type="text" name="descripcion" id="descripcion" placeholder="descripcion:"><br>
+        <button id="boton">enviar</button>
+    </form>
+    <!-- he puesto una p para el caso en el que algun campo falte -->
+    <p id="error"></p>
+    <!-- y el div resultado que contendra al div creado -->
+    <div id="resultado"></div>
+    <script src="index.js"></script>
+</body>
+</html>
