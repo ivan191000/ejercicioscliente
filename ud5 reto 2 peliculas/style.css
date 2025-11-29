@@ -1,0 +1,42 @@
+.ficha{
+    height: 20em;
+    width: 10em;
+    background: rgb(55, 52, 52);
+    padding: 1em;
+    padding-bottom: 3em;
+    border-radius: 2em;
+}
+.foto{
+    width: 10em;
+    border-radius: 2em;
+}
+#resultado{
+    margin-top: 5em;
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 3em;
+}
+.ficha:hover{
+    background: rgb(159, 159, 109);
+    box-shadow: 0 0 10px 10px rgba(133, 137, 73, 0.8);
+    cursor: pointer;
+    
+}
+
+#buscador{
+    width: 20em;
+    margin-left: 40em;
+    margin-top: 1em;
+    height: 2em;
+
+}
+body{
+    background: #171616;
+}
+h5{
+    color: white;
+}
+span{
+    color: wheat;
+}

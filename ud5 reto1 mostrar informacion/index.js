@@ -15,7 +15,7 @@ let informacion=async()=>{
         /* la funcion tendra el buscador y la respuesta del servidor */
         tabla(data,buscador);
     });
-   
+   tabla(data,buscador);
     return data
 }
 informacion();
@@ -45,7 +45,7 @@ let tabla=(data,buscador)=>{
 /* recorremos los elementos de la respuesta */
 data.forEach(element=>{
 /* si el nombre del elemento empieza por la letra del valor del buscador */
-    if(element.name.common.toLowerCase().startsWith(buscador.value.toLowerCase())){
+    if(buscador.value===""||element.name.common.toLowerCase().startsWith(buscador.value.toLowerCase())){
         /* crearemos las filas y td */
     let tr=document.createElement('tr');
     let td1=document.createElement('td');
