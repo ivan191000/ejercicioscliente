@@ -8,7 +8,7 @@ async function pideDatos() {
     let resultados=[];
 /* utilizamos un bucle para que vaya recorriendo todas las paginas */
     for(let page=1;;page++){
-  const response = await fetch(`https://www.omdbapi.com/?s=movie&y=2025&page=${page}&apikey=${apiKey}`);
+  const response = await fetch(`https://www.omdbapi.com/?s=movie&y=2024&page=${page}&apikey=${apiKey}`);
   
   if (!response.ok) {
     throw `Error ${response.status} de la BBDD: ${response.statusText}`
@@ -23,13 +23,14 @@ break;
   }
   /* iremos metiendo todos los datos en resultados */
   resultados.push(...Data.Search);
+  /* llamamos una vez mas a la funcion para que de primeras nos aparezcan todas las peliculas */
+  ficha(resultados)
 }
 /* evento de input que llamara a funcion ficha cada vez que escribamos en el buscador */
 buscador.addEventListener('input',()=>{
   ficha(resultados)
   })
-  /* llamamos una vez mas a la funcion para que de primeras nos aparezcan todas las peliculas */
-  ficha(resultados)
+  
   return Data;
 }
 /* llamamos a la funcion principal */
