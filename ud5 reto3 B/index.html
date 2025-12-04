@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .etiqueta{
+            text-align: center;
+            border-radius: 2em;
+            width: 200px;
+            background: rgb(53, 189, 87);
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <select name="opcion" id="opcion">
+            <option value="people">personajes</option>
+            <option value="films">peliculas</option>
+            <option value="planets">planetas</option>
+            <option value="starships">naves</option>
+            <option value="species">especies</option>
+        </select>
+        <input type="text" placeholder="id:" id="id">
+        <button type="submit">enviar</button>
+    </form>
+    <div id="resultado"></div>
+    <script src="index.js"></script>
+</body>
+</html>
